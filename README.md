@@ -8,10 +8,9 @@
 - Schedule this process using airflow
 
 ## The Catch:
-- No AI use whatsoever. Use docs and old fashioned trial and error!
+- Use AI as little as possible. Use docs and old fashioned trial and error as much as possible!
+    - Used AI to troubleshoot some issues around the ebay api. 
 
-## Resources
-- [DuckDB Docs](https://duckdb.org/docs/current/clients/python/overview)
 
 ## Potential Scripts
 - ingest_to_bronze
