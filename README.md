@@ -3,9 +3,7 @@
 ## Project Goals:
 - Pull Ebay data on a certain Pokemon card
 - Process the data using Polars
-- Utilize claude integration in the pipeline to supplement dataset
 - Store in DuckDB
-- Schedule this process using airflow
 
 ## The Catch:
 - Use AI as little as possible. Use docs and old fashioned trial and error as much as possible!
@@ -23,3 +21,6 @@
 - visualization_example
     - Provide a price charting visualization using the data ingested
 
+
+## Things to save for the next project
+- Utilize claude integration in the pipeline to supplement dataset
