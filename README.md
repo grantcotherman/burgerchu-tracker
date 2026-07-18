@@ -4,6 +4,7 @@
 - Pull Ebay data on a certain Pokemon card
 - Process the data using Polars
 - Store in DuckDB
+- Provide insight and tracking in various ways
 
 ## The Catch:
 - Use AI as little as possible. Use docs and old fashioned trial and error as much as possible!
@@ -17,10 +18,15 @@
 - bronze_to_silver
     - Pulls from Bronze
     - Clean and Restructure
-    - Supplement with Claude integration
 - visualization_example
     - Provide a price charting visualization using the data ingested
+    - Send emails when the product is available at a good price
 
 
 ## Things to save for the next project
 - Utilize claude integration in the pipeline to supplement dataset
+
+## Next Steps
+- ensure uniqueness at point of ingestion. Then use incremental loads with control tables.
+- See if it is possible to pull shipping price as well
+- Would it be possible to 

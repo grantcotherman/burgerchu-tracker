@@ -1,3 +1,4 @@
 .env
 burger.db
 burger.db.wal
+*.csv
