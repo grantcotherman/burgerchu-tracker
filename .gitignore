@@ -2,3 +2,6 @@
 burger.db
 burger.db.wal
 *.csv
+logs/
+run_pipeline.sh
+
