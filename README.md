@@ -1,19 +1,25 @@
 
 # Burgerchu Tracker
-TL;DR - This tool utilizes the Ebay API to ingest for sale data for a specific Pokemon card. That data is then refined to remove outliers and records that don't completely fit the search. Finally, a Gold layer is populated with aggregate data each day and an email is sent out if an available item is under a specific price threshhold.
+This tool utilizes the Ebay API to ingest for sale data for a specific Pokemon card. That data is then refined to remove outliers and records that don't completely fit the search. Finally, a Gold layer is populated with aggregate data each day and an email is sent out if an available item is under a specific price threshhold.
 
-## Overview
 
-## Project Specifics
+## Project Contents
 pipeline folder
-- 01_ingest_to_bronze.ipynb
-- 02_bronze_to_silver.ipynb
-- 03_silver_to_gold.ipynb
+- 01_ingest_to_bronze.ipynb pulls search data from ebay and stores in a local duckdb as a bronze layer
+- 02_bronze_to_silver.ipynb pulls data from bronze, verifies it meets certain requirements and loads to silver
+- 03_silver_to_gold.ipynb pulls data from silver, aggregates it and adds a row to an aggregate gold table.
+
+All loads are indempotent and incremental using control tables.
 
 analytics folder
-- conditional_email.ipynb
+- conditional_email.ipynb sends an email when an item is available below a stated price threshhold
 
-sandbox folder includes some scripts I used to work out details regarding a few of these tools.
+sandbox folder
+ -  includes some scripts I used to work out details regarding some of these tools.
+
+.env.example - Example .env
+
+.run_pipeline_example.sh - Example bash script to run the notebook. Schedule with cron
 
 
 
