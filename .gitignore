@@ -4,4 +4,7 @@ burger.db.wal
 *.csv
 logs/
 run_pipeline.sh
+.DS_store
+
+
 
